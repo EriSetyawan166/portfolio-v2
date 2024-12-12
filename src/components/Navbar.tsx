@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+
 
 const Navbar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -40,40 +42,47 @@ const Navbar: React.FC = () => {
                     </svg>
                 </button>
                 <div
-                    className={`${isOpen ? 'block' : 'hidden'
-                        } w-full md:block md:w-auto`}
+                    className={`w-full md:block md:w-auto transition-all duration-500 ease-in-out overflow-hidden md:opacity-100 md:h-auto ${isOpen ? 'opacity-100 h-screen' : 'h-0'}`}
                     id="navbar-default"
                 >
-                    <ul className="font-medium text-base flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
+                    <ul className="font-medium text-3xl md:text-base flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:bg-white">
                         <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
-                                aria-current="page"
+                            <Link
+                                onClick={toggleNavbar}
+                                to="hero-section"
+                                smooth={true}
+                                duration={500}
+                                className="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:text-violet-600 md:p-0 cursor-pointer"
                             >
                                 Home
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 "
+                            <Link
+                                onClick={toggleNavbar}
+                                to="about-section"
+                                smooth={true}
+                                duration={500}
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-600 md:p-0 cursor-pointer"
                             >
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                            <Link
+                                onClick={toggleNavbar}
+                                to="tech-stack-section"
+                                smooth={true}
+                                duration={500}
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-600 md:p-0 cursor-pointer"
                             >
-                                Tech Stacks
-                            </a>
+                                Tech Stack
+                            </Link>
                         </li>
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-600 md:p-0"
                             >
                                 Projects
                             </a>
@@ -81,7 +90,7 @@ const Navbar: React.FC = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-600 md:p-0"
                             >
                                 Contact
                             </a>
