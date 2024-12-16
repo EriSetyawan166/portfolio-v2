@@ -3,10 +3,10 @@ import Marquee from "react-fast-marquee";
 function TechStack() {
     const gradientWidth = window.innerWidth >= 768 ? 200 : 20;
     return (
-        <div id="tech-stack-section" className="pt-40 md:pt-20 h-screen flex flex-col items-start lg:items-center justify-center px-0 lg:px-72">
+        <div id="tech-stack-section" className="pt-40 md:pt-20 h-screen flex flex-col items-start lg:items-center justify-center px-0 lg:px-0">
             <p className='font-medium text-[#7b75a3] text-5xl md:text-6xl'>Tech Stack</p>
             <p className="font-medium text-justify lg:text-center">Here are some programming languages and frameworks that I have experience with:</p>
-            <div className="flex flex-col gap-5 mt-5 w-full">
+            <div className="flex flex-col gap-5 mt-20 w-full">
                 <Marquee gradient gradientWidth={gradientWidth} gradientColor="#F8F8FF" autoFill speed={30}>
                     <img src="https://img.shields.io/badge/-React-FFB6C1?style=flat&logo=react" alt="React" className="h-6   md:h-8 mr-3" />
                     <img src="https://img.shields.io/badge/-Vite-FF99CC?style=flat&logo=vite" alt="Vite" className="h-6  md:h-8 mr-3" />

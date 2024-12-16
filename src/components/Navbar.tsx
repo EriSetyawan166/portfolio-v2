@@ -80,12 +80,15 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <a
-                                href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-600 md:p-0"
+                            <Link
+                                onClick={toggleNavbar}
+                                to="projects-section"
+                                smooth={true}
+                                duration={500}
+                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-violet-600 md:p-0 cursor-pointer"
                             >
                                 Projects
-                            </a>
+                            </Link>
                         </li>
                         <li>
                             <a
